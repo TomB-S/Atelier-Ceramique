@@ -1,3 +1,7 @@
+/* ============================================
+GENERAL */
+
+/* Variables CSS */
 :root {
   --color-primary: #c0673a; /* header, boutons principaux */
   --color-secondary: #d4a055; /* sections alternées, cards */
@@ -7,15 +11,21 @@
   --color-white: #ffffff; /* texte sur fond coloré */
 }
 
+/* Reset box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:hover {
+}
+
 body {
   background-color: var(--color-bg);
 }
 
-.section-values .card {
-  background-color: var(--color-secondary);
-}
-
-/* HEADER & NAV */
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -47,82 +57,45 @@ header nav a {
   font-size: 0.95rem;
 }
 
-/* HERO */
-.hero {
-  background-image: url("/assets/images/cafeconcetto-4fXPCj0_828-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  max-height: 800px;
+a:hover {
+  color: var(--color-accent);
+  cursor: pointer;
 }
 
-.hero-text {
-  padding: 2rem;
-}
-
-/* A propos */
-.section-apropos img {
-  max-height: 350px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-.apropos-text {
-  padding: 2rem;
-}
-
-.card {
-  text-align: center;
-  border: none;
-  background-color: var(--color-bg);
-}
-
-.card .bi {
-  font-size: 2rem;
-  color: var(--color-primary);
-}
-
-/* Footer INDEX*/
+/* Footer */
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.footer a {
-  color: var(--color-text);
-}
-
-/* Footer Galery */
-.footer_galery {
-  display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   font-size: 12px;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  line-height: 2rem;
 }
 
-.footer_galery h4 {
+.footer h4 {
   font-size: 14px;
 }
 
-.socialmedia {
+.footer-socialmedia {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.socialmedia h4 {
+.footer-socialmedia h4 {
   width: 100%;
   margin-bottom: 0;
 }
 
-.socialmedia a {
+.footer-socialmedia a {
   color: var(--color-primary);
   font-size: 1rem;
 }
 
-/* Contact */
+/* ============================================
+Button */
 .btn {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -135,4 +108,111 @@ header nav a {
 .btn:hover {
   color: var(--color-accent);
   cursor: pointer;
+}
+
+/* ============================================
+INDEX - hero */
+.hero {
+  background-image: url("/assets/images/cafeconcetto-4fXPCj0_828-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  width: 100%;
+  min-height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  padding-top: 0;
+  transform: translateY(-4rem); /* décaler le contenu vers le haut  */
+}
+
+.hero-text {
+  max-width: 700px;
+  margin-top: 5rem;
+  font-size: 24px;
+  margin-bottom: 0.75rem;
+  color: var(--color-white);
+  transform: translateY(3rem);
+  transform: translateX(3rem);
+}
+
+.hero_button {
+  margin-top: 3rem;
+}
+
+/* INDEX - About */
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* INDEX - values */
+.card {
+  text-align: center;
+  border: none;
+  background-color: var(--color-bg);
+}
+
+.card .bi {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.section-values .card {
+  background-color: var(--color-secondary);
+}
+
+/* INDEX - contact */
+.contact-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  padding: 1rem 0;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-index a {
+  color: var(--color-text);
+}
+
+/* ============================================
+GALERIE */
+.gallery-section .card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover; /* recadre les pics*/
+}
+
+/* ============================================
+Contact */
+
+.informations {
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;}
+
+.informations iframe {
+  width: 80%;
 }
