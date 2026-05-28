@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
-    <!-- NAVBAR — partagée sur les 3 pages -->
-    <header>
+    <!-- NAVBAR -->
+       <header>
       <img class="header-img" src="/assets/images/Logo.png" alt="Logo" />
-      <p class="h6">Céramique artisanale, faite main à Lyon</p>
-
+       <p class="h6">Céramique artisanale, faite main à Lyon</p>
       <nav>
         <a href="/index.html"> Accueil </a>
         <a href="/galerie.html"> Galerie </a>
@@ -32,38 +31,37 @@
       <section
         class="hero position-relative d-flex align-items-center justify-content-center text-center text-white"
       >
-        <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-        <div class="container position-relative hero-text">
-          <h1 class="display-4 fw-bold">L'art de la céramique depuis 1998</h1>
-          <p class="lead mb-4">Un atelier artisanal au coeur de Lyon</p>
-          <a href="galerie.html" class="btn btn-outline-light me-2"
+        <div class="hero-container position-relative">
+         <div>
+           <h1 class="display-4 fw-bold">L'art de la céramique depuis 1998</h1>
+          <p class="lead mb-4 fw-bold hero-text">Un atelier artisanal au coeur de Lyon</p>
+         </div>
+          <div class="hero_button">
+            <a href="galerie.html" class="btn btn-outline-light me-2"
             >Voir la galerie</a
           >
           <a href="contact.html" class="btn btn-outline-light"
-            >Nous contacter</a
-          >
+            >Nous contacter</a>
+          </div>
         </div>
       </section>
 
       <!-- A PROPOS -->
 
-      <section class="py-3 section-apropos">
+      <section class="py-5 about-section">
         <div class="container">
-          <h2 class="mb-4">À propos</h2>
           <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 about-image">
               <img
-                class="img-fluid rounded"
+                class="rounded"
                 src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
                 alt="Atelier de céramique"
               />
             </div>
-            <div class="col-md-6 apropos-text">
-              <p>
-                Depuis 1998, notre atelier façonne des pièces uniques à la main,
-                au cœur de Lyon. Chaque création est le fruit d'un savoir-faire
-                artisanal transmis avec passion.
-              </p>
+            <div class="col-md-6 about-text">
+              <h2 class="mb-4">À propos de nous</h2>
+              <p>Fondé en 1998 par Tom Ben, l'Atelier Céramique Lyon est né d'une passion pour la terre et le travail à la main.</p>
+              <p>Chaque bol, chaque vase, chaque assiette porte la trace des doigts qui l'ont façonné. Nos émaux sont préparés dans l'atelier, garantissant des couleurs douces et naturelles qui s'inscrivent dans le quotidien avec élégance.</p>
             </div>
           </div>
         </div>
@@ -121,21 +119,21 @@
           <div class="row g-3">
             <div class="col-md-3">
               <img
-                src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
+                src="assets/images/cafeconcetto-4fXPCj0_828-unsplash.jpg"
                 alt="Céramique 1"
                 class="img-fluid rounded"
               />
             </div>
             <div class="col-md-3">
               <img
-                src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
+                src="/assets/images/suzanne-boureau-vG9Y8YvzdSQ-unsplash.jpg"
                 alt="Céramique 2"
                 class="img-fluid rounded"
               />
             </div>
             <div class="col-md-3">
               <img
-                src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
+                src="/assets/images/yana-hurska-_MRt6nQ_WKw-unsplash.jpg"
                 alt="Céramique 3"
                 class="img-fluid rounded"
               />
@@ -152,10 +150,36 @@
       </section>
     </main>
 
+    <section >
+      <div class="contact-index">
+        <h3>Envie d'une pièce sur mesure ?</h3>
+        <div>
+           <p class="card-text">
+          Racontez-nous votre projet, nous le façonnerons ensemble.
+          <a href="/contact.html" class="btn btn-outline-light me-2"
+            >Nous contacter</a
+          >
+        </p>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer">
-        <h3>Envie d'une pièce sur mesure ?</h3>
-        <a href="/contact.html" class="btn btn-outline-light me-2">Contact</a>
+        <div>
+          <h4>Adresse</h4>
+          <p class="card-text"> 📍 12 rue de la Céramique, Lyon </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p class="card-text"> 📞 04 67 00 00 00</p>
+        </div>
+        <div class="footer-socialmedia">
+          <h4>Réseaux</h4>
+          <a href="#" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" target="_blank" rel="noopener" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+      </div>
+      </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
