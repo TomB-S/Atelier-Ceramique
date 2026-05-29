@@ -18,9 +18,6 @@ GENERAL */
   box-sizing: border-box;
 }
 
-:hover {
-}
-
 body {
   background-color: var(--color-bg);
 }
@@ -211,7 +208,8 @@ Contact */
 .informations {
   margin: 0 3rem;
   display: flex;
-  flex-direction: column;}
+  flex-direction: column;
+}
 
 .informations iframe {
   width: 80%;
