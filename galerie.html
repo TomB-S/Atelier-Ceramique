@@ -12,129 +12,216 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
     <!-- NAVBAR — partagée sur les 3 pages -->
     <header>
-      <img class="header-img" src="/assets/images/Logo.png" alt="Logo" />
-       <p class="h6">Céramique artisanale, faite main à Lyon</p>
-      <nav>
-        <a href="/index.html"> Accueil </a>
-        <a href="/galerie.html"> Galerie </a>
-        <a href="/contact.html"> Contact </a>
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/index.html">
+            <img
+              class="header-img"
+              src="/assets/images/Logo.png"
+              alt="Atelier Céramique Lyon"
+            />
+          </a>
+
+          <p class="tagline">Céramique artisanale, faite main à Lyon</p>
+
+          <!-- Bouton burger (visible uniquement sur mobile) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu (collapsed sur mobile, visible sur md+) -->
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/galerie.html">Galerie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-- Gallery -->
     <main>
-   <section class="py-5 gallery-section">
-      <div class="container">
-        <h2 class="mb-4">Notre galerie</h2>
+      <section class="py-5 gallery-section">
+        <div class="container">
+          <h2 class="mb-4">Notre galerie</h2>
           <div class="row g-3">
-           <div class="col-md-4">
+            <div class="col-md-4">
               <div class="card">
+                <div class="card-img-wrapper">
                   <img
-                src="/assets/images/pew-nguyen-gwVW9PabQKM-unsplash.jpg"
-                alt="Céramique 1"
-                class="img-fluid rounded"
-              />
-             <div class="card-body">
-              <h5 class="card-title">Façonnage</h5>
-              <p class="card-text">La terre prend forme entre les mains de l'artisan au tour.
-              </p>
-            </div>
-                      </div>              
-            </div>
-              <div class="col-md-4">
-              <div class="card">
-                  <img
-                src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
-                alt="Céramique 2"
-                class="img-fluid rounded"
-              />
-            <div class="card-body">
-              <h5 class="card-title">Collection Sable </h5>
-              <p class="card-text">Trois vases bruts aux textures naturelles, non émaillés.</p>
-            </div>
-              </div>              
-            </div>
-              <div class="col-md-4">
-              <div class="card">
-                  <img
-                src="/assets/images/omk-Uo2W75MB8uU-unsplash.jpg"
-                alt="Céramique 3"
-                class="img-fluid rounded"
-              />
-            <div class="card-body">
-              <h5 class="card-title">Collection Colorée</h5>
-              <p class="card-text">Vases noirs, terracotta et bleus, une palette audacieuse.</p>
-            </div>
-              </div>              
-            </div>
-              <div class="col-md-4">
-              <div class="card">
-                  <img
-                src="/assets/images/suzanne-boureau-vG9Y8YvzdSQ-unsplash.jpg"
-                alt="Céramique 4"
-                class="img-fluid rounded"
-              />
-            <div class="card-body">
-                  <h5 class="card-title">Collection Bleue</h5>
-                  <p class="card-text">Bols et carafes aux tons naturels, avec touches de bleu nuit.</p>
+                    src="/assets/images/pew-nguyen-gwVW9PabQKM-unsplash.jpg"
+                    alt="Façonnage d'une céramique au tour"
+                  />
+                  <div class="card-overlay">
+                    <h5>Façonnage</h5>
+                    <p>
+                      La terre prend forme entre les mains de l'artisan au tour.
+                    </p>
+                  </div>
                 </div>
-              </div>              
+              </div>
             </div>
-              <div class="col-md-4">
+
+            <div class="col-md-4">
               <div class="card">
+                <div class="card-img-wrapper">
                   <img
-                src="/assets/images/taylor-heery-ZSgWcW70cTs-unsplash.jpg"
-                alt="Céramique 5"
-                class="img-fluid rounded"
-              />
-            <div class="card-body">
-                  <h5 class="card-title"> L'atelier</h5>
-                  <p class="card-text">Les outils et la terre crue, au coeur du processus créatif.</p>
+                    src="/assets/images/yana-hurska-zeGT9j4ltRA-unsplash.jpg"
+                    alt="Collection Sable — trois vases bruts"
+                  />
+                  <div class="card-overlay">
+                    <h5>Collection Sable</h5>
+                    <p>
+                      Trois vases bruts aux textures naturelles, non émaillés.
+                    </p>
+                  </div>
                 </div>
-              </div>              
+              </div>
             </div>
-              <div class="col-md-4">
+
+            <div class="col-md-4">
               <div class="card">
+                <div class="card-img-wrapper">
                   <img
-                src="/assets/images/aedrian-salazar-BshM9VkzGw8-unsplash.jpg"
-                alt="Céramique 6"
-                class="img-fluid rounded"
-              />
-            <div class="card-body">
-                  <h5 class="card-title">Gravure</h5>
-                  <p class="card-text">
-                    Chaque pièce est façonnée à la main dans notre atelier
-                    lyonnais.
-                  </p>
+                    src="/assets/images/omk-Uo2W75MB8uU-unsplash.jpg"
+                    alt="Collection Colorée — vases noirs et terracotta"
+                  />
+                  <div class="card-overlay">
+                    <h5>Collection Colorée</h5>
+                    <p>
+                      Vases noirs, terracotta et bleus, une palette audacieuse.
+                    </p>
+                  </div>
                 </div>
-              </div>  
-              </div>            
-            </div>  
-          </section>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img
+                    src="/assets/images/suzanne-boureau-vG9Y8YvzdSQ-unsplash.jpg"
+                    alt="Collection Bleue — bols et carafes"
+                  />
+                  <div class="card-overlay">
+                    <h5>Collection Bleue</h5>
+                    <p>
+                      Bols et carafes aux tons naturels, avec touches de bleu
+                      nuit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img
+                    src="/assets/images/taylor-heery-ZSgWcW70cTs-unsplash.jpg"
+                    alt="L'atelier — outils et terre crue"
+                  />
+                  <div class="card-overlay">
+                    <h5>L'atelier</h5>
+                    <p>
+                      Les outils et la terre crue, au coeur du processus
+                      créatif.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img
+                    src="/assets/images/aedrian-salazar-BshM9VkzGw8-unsplash.jpg"
+                    alt="Gravure sur céramique"
+                  />
+                  <div class="card-overlay">
+                    <h5>Gravure</h5>
+                    <p>
+                      Chaque pièce est façonnée à la main dans notre atelier
+                      lyonnais.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-     <footer>
+
+    <footer>
       <div class="footer">
         <div>
           <h4>Adresse</h4>
-          <p class="card-text"> 📍 12 rue de la Céramique, Lyon </p>
+          <p class="footer-text">📍 12 rue de la Céramique, Lyon</p>
         </div>
         <div>
           <h4>Contact</h4>
-          <p class="card-text"> 📞 04 67 00 00 00</p>
+          <p class="footer-text">📞 04 67 00 00 00</p>
         </div>
         <div class="footer-socialmedia">
           <h4>Réseaux</h4>
-          <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-          <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-          <a href="#" target="_blank" rel="noopener" title="Pinterest" aria-label="Pinterest"><i class="bi bi-pinterest" aria-hidden="true"></i></a>
-      </div>
-      </div>
+          <div class="footer-social-icons">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Pinterest"
+            >
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notre galerie</title>
+    <title>Nous contacter</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,26 +13,61 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="/assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- NAVBAR — partagée sur les 3 pages -->
-    <header>
-      <img class="header-img" src="/assets/images/Logo.png" alt="Logo" />
-      <p class="h6">Céramique artisanale, faite main à Lyon</p>
-      <nav>
-        <a href="/index.html"> Accueil </a>
-        <a href="/galerie.html"> Galerie </a>
-        <a href="/contact.html"> Contact </a>
-      </nav>
-    </header>
+     <header>
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index.html">
+              <img class="header-img" src="/assets/images/Logo.png" alt="Atelier Céramique Lyon" />
+            </a>
+            <div class="tagline-div">
+              <p class="tagline">Céramique artisanale, faite main à Lyon</p>
+            </div>
+      
+
+            <!-- Bouton burger (visible uniquement sur mobile) -->
+            <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navMenu"
+              aria-controls="navMenu" 
+              aria-expanded="false" 
+              aria-label="Ouvrir le menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu (collapsed sur mobile, visible sur md+) -->
+            <div class="collapse navbar-collapse" id="navMenu">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/galerie.html">Galerie</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main>
-      <section class="py-6">
-        <div class="container">
+      <section class="py-5">
+        <div class="container contact-container">
           <h2 class="text-center mb-5">Nous contacter</h2>
           <div class="row">
             <div class="col-md-6">
               <form>
-                <label for="prenom">Prénom *</label>
+                <label for="prenom" class="mb-1">Prénom *</label>
                 <input
                   type="text"
                   class="form-control"
@@ -41,7 +76,7 @@
                   placeholder="Votre prénom"
                 />
 
-                <label for="nom">Nom *</label>
+                <label for="nom" class="mb-1">Nom *</label>
                 <input
                   type="text"
                   class="form-control"
@@ -50,7 +85,7 @@
                   placeholder="Votre nom"
                 />
 
-                <label for="email">Email *</label>
+                <label for="email" class="mb-1">Email *</label>
                 <input
                   type="email"
                   class="form-control"
@@ -58,7 +93,7 @@
                   required
                   placeholder="votre@email.com"
                 />
-                <div class="mb-3">
+                <div class="mb-1">
                   <label for="sujet">Sujet</label>
                   <select
                     class="form-select"
@@ -73,6 +108,7 @@
                 <div class="mb-3">
                   <label for="message">Message *</label>
                   <textarea
+                  id="message"
                     class="form-control"
                     rows="5"
                     required
@@ -91,17 +127,18 @@
                     J'accepte le traitement de mes données *
                   </label>
                 </div>
-                <button type="submit" class="btn btn-warning">
+                <button type="submit" class="btn">
                   Envoyer ma demande
                 </button>
               </form>
             </div>
               <div class="col-md-5 informations">
+                <hr class="separateur">
               <h5>Infos pratiques</h5>
               <p>📍 12 rue de la Céramique, Lyon</p>
               <p>📞 04 67 00 00 00</p>
               <p>✉ contact@atelier-ceramique.fr</p>
-                <iframe title="Carte de l'atelier" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6693.647972815062!2d4.827617798118045!3d45.767545154602026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%2012%20rue%20de%20la%20C%C3%A9ramique%2C%20Lyon!5e1!3m2!1sfr!2sfr!4v1779997614033!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                <iframe title="Carte de l'atelier" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6693.647972815062!2d4.827617798118045!3d45.767545154602026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%2012%20rue%20de%20la%20C%C3%A9ramique%2C%20Lyon!5e1!3m2!1sfr!2sfr!4v1779997614033!5m2!1sfr!2sfr" height="450" frameborder="0" allowfullscreen loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -112,20 +149,22 @@
       <div class="footer">
         <div>
           <h4>Adresse</h4>
-          <p class="card-text"> 📍 12 rue de la Céramique, Lyon </p>
+          <p class="footer-text"> 📍 12 rue de la Céramique, Lyon </p>
         </div>
         <div>
           <h4>Contact</h4>
-          <p class="card-text"> 📞 04 67 00 00 00</p>
+          <p class="footer-text"> 📞 04 67 00 00 00</p>
         </div>
         <div class="footer-socialmedia">
           <h4>Réseaux</h4>
+          <div class="footer-social-icons">
             <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-          <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-          <a href="#" target="_blank" rel="noopener" title="Pinterest" aria-label="Pinterest"><i class="bi bi-pinterest" aria-hidden="true"></i></a>
-      </div>
-      </div>
+            <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" target="_blank" rel="noopener" title="Pinterest" aria-label="Pinterest"><i class="bi bi-pinterest" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
